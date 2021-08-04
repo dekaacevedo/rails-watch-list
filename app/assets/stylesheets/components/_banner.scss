@@ -1,5 +1,15 @@
 .banner {
   background-size: cover;
-  padding: 200px;
+  height: 450px;
   background-position: center;
+}
+
+.banner-container {
+  height: 450px;
+}
+
+.movie-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }

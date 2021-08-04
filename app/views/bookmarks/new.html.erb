@@ -1,0 +1,10 @@
+<div class="form-container mt-5 p-3 rounded">
+  <h1>New Bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| -%>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.button :submit, class: "btn btn-success btn-white" %>
+    <%= link_to "Back", list_path(@list), class: "btn btn-danger btn-white"  %>
+  <% end -%>
+</div>
+
