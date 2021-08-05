@@ -15,7 +15,7 @@
 require 'json'
 require 'open-uri'
 
-url = 'http://tmdb.lewagon.com/movie/top_rated'
+url = 'http://tmdb.lewagon.com/movie/top_rated?api_key=%3Cyour_api_key%3E&language=en-US&page=2'
 consulta = URI.open(url).read
 result = JSON.parse(consulta)
 
@@ -27,4 +27,5 @@ movies.each do |movie|
     poster_url: "https://image.tmdb.org/t/p/original#{movie['poster_path']}",
     rating: movie['vote_average']
     )
+   puts "#{movie['title']} ha sido creada"
 end
