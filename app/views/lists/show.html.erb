@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="banner d-flex flex-column align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @list.image_url %>')">
+  <div class="banner d-flex flex-column align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 2000, crop: :crop %>')">
     <h1 class="color-white title"><%= @list.name %></h1>
   </div>
 

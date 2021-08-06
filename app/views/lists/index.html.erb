@@ -11,7 +11,7 @@
     <div class="d-flex flex-wrap lists-container">
       <% @lists.each do |list| %>
         <%= link_to(list_path(list)) do %>
-          <div class="background-list-card list-card d-flex align-items-center justify-content-center mr-3 mb-3 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= list.image_url %>')">
+          <div class="background-list-card list-card d-flex align-items-center justify-content-center mr-3 mb-3 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= cl_image_path list.photo.key, height: 1000, crop: :fit %>')"> <!-- scale, fit, fill, limit, pad, crop. -->
             <p class="list-name"> <%= list.name %> </p>
           </div>
         <% end %>
@@ -23,4 +23,5 @@
     </div>
   </div>
 </div>
+
 
