@@ -42,3 +42,9 @@
   font-size: 0.8em;
   color: #8f8f8f;
 }
+
+
+@include media-breakpoint-only(xs) {
+  .movie-card {
+    width: 300px;
+  } }

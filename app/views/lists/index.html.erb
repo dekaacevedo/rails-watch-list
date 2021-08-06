@@ -11,8 +11,8 @@
     <div class="d-flex flex-wrap lists-container">
       <% @lists.each do |list| %>
         <%= link_to(list_path(list)) do %>
-          <div class="background-list-card list-card d-flex align-items-center justify-content-center mr-3 mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.image_url %>')">
-            <p> <%= list.name %> </p>
+          <div class="background-list-card list-card d-flex align-items-center justify-content-center mr-3 mb-3 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= list.image_url %>')">
+            <p class="list-name"> <%= list.name %> </p>
           </div>
         <% end %>
       <% end %>

@@ -15,7 +15,7 @@
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-success btn-white align-self-end mb-3 mr-3"  %>
 
   <div class="d-flex">
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap justify-content-center justify-content-center">
       <% @list.movies.each do |movie| %>
         <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
         <div class="background-movie-card movie-card d-flex flex-column m-2">
